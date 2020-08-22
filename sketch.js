@@ -10,7 +10,7 @@ var backgroundImg;
 function preload() {
 objectImg = loadImage("Image.png");
 
-getbackgroundImg
+getbackgroundImg();
 }
 
 function setup() {
@@ -50,7 +50,10 @@ function setup() {
 }
 
 function draw() {
-  background(bg);  
+
+  if (backgroundImg) {
+  background(backgroundImg);  
+}
   drawSprites();
 
   imageMode(CENTER);
