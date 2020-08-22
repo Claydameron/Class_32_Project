@@ -36,5 +36,11 @@ class BoxO {
     
   }
 
+  playerScore() {
+    if(this.Visiblity < 0 && this.Visiblity > -1000) {
+      score = score + 1;
+    }
+    }
+
   
 }

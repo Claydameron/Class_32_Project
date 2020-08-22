@@ -6,6 +6,7 @@ const Constraint = Matter.Constraint;
 var object, objectImg;
 var bg = "Day.png";
 var backgroundImg;
+var score = 0;
 
 function preload() {
 objectImg = loadImage("Image.png");
@@ -84,6 +85,8 @@ function draw() {
   
   sling.display();
 
+  text("Score = " + score,40,20);
+
 }
 
 function mouseDragged(){
@@ -104,13 +107,13 @@ function keyPressed(){
       var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
       var responseJson = await response.json();
       var dateTime = responseJson.datetime;
-      var hour = dateTime.slice(05,07);
+      var hour = dateTime.slice(17,19);
       console.log(hour);
   
       if(hour >= 06 && hour <= 18) {
           bg = "Day.png";
       } else {
-          bg = "Night.jpg";
+          bg = "Night.png";
       }
   
       backgroundImg = loadImage(bg);
