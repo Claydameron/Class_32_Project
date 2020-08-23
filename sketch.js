@@ -82,9 +82,31 @@ function draw() {
   boxO23.display();
   boxY21.display();
 
+  boxB11.playerScore();
+  boxB12.playerScore();
+  boxB13.playerScore();
+  boxB14.playerScore();
+  boxB15.playerScore();
+  boxO11.playerScore();
+  boxO12.playerScore();
+  boxO13.playerScore();
+  boxY11.playerScore();
+
+  boxB21.playerScore();
+  boxB22.playerScore();
+  boxB23.playerScore();
+  boxB24.playerScore();
+  boxB25.playerScore();
+  boxO21.playerScore();
+  boxO22.playerScore();
+  boxO23.playerScore();
+  boxY21.playerScore();
+
   
   sling.display();
 
+
+  fill("white");
   text("Score = " + score,40,20);
 
 }
